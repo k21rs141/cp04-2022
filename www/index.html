@@ -38,6 +38,11 @@
         $('#btnC').click(function(e) {
             btnCClick(e);
         });
+
+        $('#btnD').click(function(e) {
+            btnDClick(e);
+        });
+
         init();
     });
     
@@ -161,6 +166,7 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled', false);
         
     }
 
@@ -203,6 +209,11 @@
         $("#remain").html("残り時間：" + period);
         
     }
+
+    //ButtonDがクリックされたときの処理
+    function btnDClick(e){
+        active = false;
+
     
  
     // 繰り返し実行する処理
@@ -235,6 +246,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>  
+    <button id="btnD">5mtimer</button>  
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>
