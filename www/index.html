@@ -39,9 +39,9 @@
             btnCClick(e);
         });
 
-        $('#btnD').click(function(e) {
-            btnDClick(e);
-        });
+   //     $('#btnD').click(function(e) {
+   //         btnDClick(e);
+   //     });
 
         init();
     });
@@ -211,10 +211,14 @@
     }
 
     //ButtonDがクリックされたときの処理
-   function btnDClick(e){
-      active = false;
-     
-    }
+//   function btnDClick(e){
+//       alarm();
+//       active = false;
+//      period = 60*parseInt($(5).val())+parseInt($(0).val());
+//       $("#time").html("経過時間：0");
+//       $("#remain").html("残り時間：" + period);
+    
+//    }
 
 
     
@@ -229,6 +233,12 @@
             analog(rest);
             if(rest <= 0){
                 active = false;
+                alarm();
+            }
+            if(rest % 60 ==0){
+                alarm();
+            }
+            if(rest <=3 ){
                 alarm();
             }
         }
